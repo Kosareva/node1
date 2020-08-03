@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "task1": "nodemon task1.js",
-    "task2": "nodemon task2.js"
+    "build": "webpack",
+    "task1": "nodemon dist/task1.js",
+    "task2": "nodemon dist/task2.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,14 @@
   },
   "homepage": "https://github.com/Kosareva/node1#readme",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0"
   },
   "dependencies": {
     "csvtojson": "^2.0.10"
